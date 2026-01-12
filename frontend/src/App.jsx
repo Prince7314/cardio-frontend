@@ -1,47 +1,21 @@
-import { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import PredictPage from './pages/PredictPage';
+import AboutPage from './pages/AboutPage';
 
-import Navbar from "./components/Navbar";
-import Home from "./components/Home";
-import Info from "./components/Info";
-import Model from "./components/Model";
-
-const pageAnim = {
-  initial: { opacity: 0, y: 20 },
-  animate: { opacity: 1, y: 0 },
-  exit: { opacity: 0, y: -20 },
-};
-
-function AppController() {
-  const [active, setActive] = useState("Home");
-
+function App() {
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      <Navbar active={active} setActive={setActive} />
-
-      <div className="p-8 max-w-7xl mx-auto">
-        <AnimatePresence mode="wait">
-          {active === "Home" && (
-            <motion.div key="home" {...pageAnim}>
-              <Home />
-            </motion.div>
-          )}
-
-          {active === "Info" && (
-            <motion.div key="info" {...pageAnim}>
-              <Info />
-            </motion.div>
-          )}
-
-          {active === "Model" && (
-            <motion.div key="model" {...pageAnim}>
-              <Model />
-            </motion.div>
-          )}
-        </AnimatePresence>
+    <Router>
+      <div className="antialiased font-sans">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/predict" element={<PredictPage />} />
+          <Route path="/about" element={<AboutPage />} />
+        </Routes>
       </div>
-    </div>
+    </Router>
   );
 }
 
-export default AppController;
+export default App;
