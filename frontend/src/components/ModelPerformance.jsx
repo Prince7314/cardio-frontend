@@ -6,7 +6,7 @@ const models = [
     { name: 'Stacking Classifier', accuracy: 73.4, active: false },
     { name: 'Linear SVC', accuracy: 73.0, active: false },
     { name: 'Logistic Regression', accuracy: 72.5, active: false },
-    { name: 'Random Forest', accuracy: 72.5, active: false }, // Note: Duplicate name in prompt, keeping exact valid text
+    { name: 'Linear Regression', accuracy: 72.5, active: false }, // Note: Duplicate name in prompt, keeping exact valid text
     { name: 'Gaussian Naive Bayes', accuracy: 71.4, active: false },
     { name: 'K-Nearest Neighbors', accuracy: 71.2, active: false },
     { name: 'Decision Tree', accuracy: 68.8, active: false },
