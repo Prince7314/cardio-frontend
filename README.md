@@ -220,13 +220,3 @@ Computer Science & Machine Learning Enthusiast
 📜 License
 
 This project is for educational and portfolio purposes.
-
-
----
-
-If you want next:
-- 📸 README with screenshots  
-- 🐳 Docker-ready README  
-- 🧾 Resume / LinkedIn project description  
-
-Just tell me 👌
